@@ -13,7 +13,6 @@ public class MyStupidTest {
         assertTrue(true);
     }
 
-    @Disabled
     @Test
     public void testFailed() {
         System.out.println("True or False");

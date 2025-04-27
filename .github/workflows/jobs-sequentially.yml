@@ -1,0 +1,32 @@
+name: Parallel Jobs
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+on:
+  push:
+    branches:
+      - main
+      - dev
+jobs:
+  my_first_job:
+    name: Name of First Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: |
+          sleep 5
+  my_second_job:
+    needs: my_first_job
+    name: Name of Second Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: |
+          sleep 5
+  my_third_job:
+    needs: my_second_job
+    name: Name of Third Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🍏 This job's status is ${{ job.status }}."

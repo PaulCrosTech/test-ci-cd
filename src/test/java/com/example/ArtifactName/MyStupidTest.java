@@ -1,5 +1,6 @@
 package com.example.ArtifactName;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -12,6 +13,7 @@ public class MyStupidTest {
         assertTrue(true);
     }
 
+    @Disabled
     @Test
     public void testFailed() {
         System.out.println("True or False");

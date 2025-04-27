@@ -1,5 +1,5 @@
 name: Maven CI
-run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+run-name: Deploy to ${{ github.ref_name }} by @${{ github.actor }}
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - dev
 jobs:
   compilation_et_test:
-    name: Name of First Job
+    name: Compilation et tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

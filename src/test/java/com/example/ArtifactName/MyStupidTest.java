@@ -11,4 +11,10 @@ public class MyStupidTest {
         System.out.println("True is true");
         assertTrue(true);
     }
+
+    @Test
+    public void testFailed() {
+        System.out.println("True or False");
+        assertTrue(false);
+    }
 }
